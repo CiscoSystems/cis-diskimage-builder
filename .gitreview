@@ -1,0 +1,6 @@
+[gerrit]
+host=cis-gerrit.cisco.com
+port=29418
+project=cis-diskimage-builder
+defaultbranch=master
+defaultremote=gerrit
