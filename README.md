@@ -4,7 +4,8 @@ This repository houses custom elements for use with Openstack diskimage-builder
 
 ## Usage
 
-	export ELEMENT_PATH=$ELEMENT_PATH:{path to this repo}
+	export ELEMENT_PATH={path to this repo}/elements
+        disk-image-create -a amd64 {element} [element] cisco
 	
 ## Directories
 
