@@ -1,0 +1,6 @@
+export DIB_SAT_KEY=""
+export DIB_SAT_URL=""
+export DIB_SAT_CERT_RPM_URL=""
+export DIB_REG_TYPE=""
+export DIB_RHSM_POOL=""
+export DIB_RHSM_REPOS=""
