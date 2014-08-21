@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+DIB_INIT_SYSTEM=$(dib-init-system)
+if [ "$DIB_INIT_SYSTEM" == "upstart" ]; then
+  update-rc.d ntp defaults 
+elif [ "$DIB_INIT_SYSTEM" == "systemd" ]; then
+  systemctl enable ntpd.service
+elif [ "$DIB_INIT_SYSTEM" == "sysv" ]; then
+  ln -s /etc/init.d/ntpd /etc/rc3.d/
+fi
