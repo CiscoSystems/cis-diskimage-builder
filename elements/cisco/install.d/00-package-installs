@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+install-packages -m cisco bindutils_package
+install-packages -m cisco mirrors_package

@@ -1,0 +1,12 @@
+{
+  "family": {
+    "debian": {
+      "bindutils_package": "dnsutils",
+      "mirrors_package": "apt"
+    }
+  },
+  "default": {
+    "bindutils_package": "bind-utils",
+    "mirrors_package": "yum-plugin-fastestmirror"
+  }
+}

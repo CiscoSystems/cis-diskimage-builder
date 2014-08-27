@@ -3,8 +3,7 @@
 set -eu
 set -o pipefail
 
-grep -q UTC /etc/localtime
-if [ $? -ne 0 ]; then
+if ! grep -q UTC /etc/localtime; then
   cp -f /usr/share/zoneinfo/UTC /etc/localtime
 fi
 
@@ -17,7 +16,6 @@ elif [ "$DIB_INIT_SYSTEM" == "sysv" ]; then
   ln -s /etc/init.d/ntpd /etc/rc3.d/
 fi
 
-grep -q tinker /etc/ntp.conf
-if [ $? -ne 0 ]; then
+if ! grep -q tinker /etc/ntp.conf; then
   echo "tinker panic 0" >> /etc/ntp.conf
 fi
