@@ -3,6 +3,11 @@
 set -eu
 set -o pipefail
 
+grep -q UTC /etc/localtime
+if [ $? -ne 0 ]; then
+  cp -f /usr/share/zoneinfo/UTC /etc/localtime
+fi
+
 DIB_INIT_SYSTEM=$(dib-init-system)
 if [ "$DIB_INIT_SYSTEM" == "upstart" ]; then
   update-rc.d ntp defaults 
@@ -10,4 +15,9 @@ elif [ "$DIB_INIT_SYSTEM" == "systemd" ]; then
   systemctl enable ntpd.service
 elif [ "$DIB_INIT_SYSTEM" == "sysv" ]; then
   ln -s /etc/init.d/ntpd /etc/rc3.d/
+fi
+
+grep -q tinker /etc/ntp.conf
+if [ $? -ne 0 ]; then
+  echo "tinker panic 0" >> /etc/ntp.conf
 fi

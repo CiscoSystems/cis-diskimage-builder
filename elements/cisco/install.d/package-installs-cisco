@@ -1,0 +1,10 @@
+puppet
+ntp
+bind-utils
+telnet
+traceroute
+gdisk
+rsync
+rsyslog
+yum-plugin-fastestmirror
+-postfix
