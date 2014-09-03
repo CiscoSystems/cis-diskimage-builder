@@ -4,9 +4,20 @@ This repository houses custom elements for use with Openstack diskimage-builder
 
 ## Usage
 
+        git clone https://github.com/openstack/diskimage-builder.git
+        cd diskimage-builder
+        sudo python setup.py install
+        cd
+        git clone http://cis-gerrit.cisco.com/cis-diskimage-builder
 	export ELEMENT_PATH={path to this repo}/elements
-        disk-image-create -a amd64 {element} [element] cisco
+        disk-image-create -a amd64 -o disk-name {element} [element] cisco
 	
+
+### Example
+
+        disk-image-create -a amd64 -o trusty.qcow2 ubuntu vm cisco
+        disk-image-create -a amd64 -o rhel7.qcow2 rhel7 vm cisco
+
 ## Directories
 
 * root.d: Create or adapt the initial root filesystem content. This is where
