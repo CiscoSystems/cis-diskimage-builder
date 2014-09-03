@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+if ! grep -q UTC /etc/localtime; then
+  cp -f /usr/share/zoneinfo/UTC /etc/localtime
+fi

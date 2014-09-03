@@ -13,7 +13,8 @@ elif [ -f /etc/debian_version ]; then
   CLOUD_INIT_VERSION=`dpkg -s cloud-init | grep Version | cut -d: -f2`
   if [[ $CLOUD_INIT_VERSION =~ "0.6." ]]; then
     dpkg -r cloud-init
-    dpkg -i python-cloud-init
+    add-apt-repository ppa:al592b/ppa
+    apt-get -y install python-cloud-init
   fi
 else
   echo "Only redhat and debian family OS supported at this time"

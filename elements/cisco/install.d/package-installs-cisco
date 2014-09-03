@@ -1,5 +1,5 @@
 puppet
-ntp
+chrony
 telnet
 traceroute
 gdisk
