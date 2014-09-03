@@ -54,11 +54,8 @@ grep PasswordAuthentication /etc/ssh/sshd_config | grep -qi no || grep ssh_pwaut
 TEST="Check for UTC timezone"
 grep -q UTC /etc/localtime
 
-TEST="Check for ntp"
-which ntpd
-
-TEST="Check for cloud-init update"
-cloud-init --version 2>&1 | grep -q "0.7"
+TEST="Check for chrony"
+which chronyc
 
 TEST="Check for cloud-user"
 grep -q cloud-user /etc/cloud/cloud.cfg

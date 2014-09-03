@@ -7,15 +7,27 @@ user = "cloud-user"
 with open(cloudcfg) as f:
   cfg = yaml.load(f)
 
-print cfg['system_info']['default_user']['name']
-if cfg['system_info']['default_user']['name'] == user:
-  print("No change needed")
-  exit()
-else:
-  # Change the user to cloud-user
-  cfg['system_info']['default_user']['name'] = user
-  cfg['system_info']['default_user']['gecos'] = "Cloud User"
-  print cfg['system_info']['default_user']['name']
+try:
+  if cfg['system_info']['default_user']['name']:
+    synver = "2"
+except KeyError:
+  synver = "1"
+
+if synver == "1":
+  if cfg['user'] == user:
+    print("No change needed")
+    exit()
+  else:
+    cfg['user'] = user
+elif synver == "2":
+  if cfg['system_info']['default_user']['name'] == user:
+   print("No change needed")
+   exit()
+  else:
+   # Change the user to cloud-user
+   cfg['system_info']['default_user']['name'] = user
+   cfg['system_info']['default_user']['gecos'] = "Cloud User"
+   print cfg['system_info']['default_user']['name']
 
 
 with open(cloudcfg, "w") as f:
