@@ -34,10 +34,16 @@ trap "cleanup" EXIT
 chroot $MP <<'END_TESTS'
 
 function error_exit() {
-  echo "Test $TEST failed"
+  echo -e "\E[31mTest $TEST failed\E[0m"
   exit 1
 }
+
+function success_exit() {
+  echo -e "\E[32m $TEST OK\E[0m"
+}
+
 trap "error_exit" ERR
+trap "success_exit" SIGCHLD
 
 TEST="Check for serial console"
 if [ -e /boot/grub2/grub.cfg ]; then
