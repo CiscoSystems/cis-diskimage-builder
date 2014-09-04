@@ -31,7 +31,8 @@ function cleanup() {
 
 trap "cleanup" EXIT
 
-chroot $MP <<'END_TESTS'
+chroot $MP /bin/bash --noediting -i <<'END_TESTS'
+unset PS1
 
 function error_exit() {
   echo -e "\E[31mTest $TEST failed\E[0m"
