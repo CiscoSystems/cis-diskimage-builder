@@ -1,15 +1,20 @@
-# cis-diskimage-builder
+:# cis-diskimage-builder
 
 This repository houses custom elements for use with Openstack diskimage-builder
 
 ## Usage
+Install diskimage-builder either from pypi or github
+
+        pip install -r requirements.txt
+
+or latest from source
 
         git clone https://github.com/openstack/diskimage-builder.git
         cd diskimage-builder
         sudo python setup.py install
         cd
         git clone http://cis-gerrit.cisco.com/cis-diskimage-builder
-	export ELEMENT_PATH={path to this repo}/elements
+		export ELEMENT_PATH={path to this repo}/elements
         disk-image-create -a amd64 -o disk-name {element} [element] cisco
 	
 
