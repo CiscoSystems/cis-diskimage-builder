@@ -1,8 +1,0 @@
-puppet
-chrony
-telnet
-traceroute
-gdisk
-rsync
-rsyslog
--postfix

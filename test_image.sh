@@ -70,4 +70,7 @@ grep -q cloud-user /etc/cloud/cloud.cfg
 TEST="Check for puppet client"
 which puppet
 
+TEST="Check for bindutils"
+which dig
+
 END_TESTS
