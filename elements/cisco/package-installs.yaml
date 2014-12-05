@@ -1,4 +1,6 @@
 puppet:
+bindutils_package:
+mirrors_package:
 chrony:
 telnet:
 traceroute:
