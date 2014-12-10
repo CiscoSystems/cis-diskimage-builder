@@ -19,8 +19,9 @@ disk-image-create -a amd64 -o images/centos7.qcow2 centos7 base vm cisco
 # This is a lame assumption that I'm trying to work around
 export DIB_CLOUD_IMAGES="http://173.39.232.144/images/"
 export BASE_IMAGE_FILE="rhel-guest-image-7.0-20140930.0.x86_64.qcow2"
-export REG_METHOD='portal'
-export REG_AUTO_ATTACH=1
+export REG_METHOD='disable'
+export REG_HALT_UNREGISTER=1
+export DIB_YUM_REPO_CONF=`pwd`/redhat.repo
 disk-image-create -a amd64 -o images/rhel7.qcow2 rhel7 base vm cisco
 ./test_image.sh images/rhel7.qcow2
 

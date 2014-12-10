@@ -1,0 +1,169 @@
+[rhel-ha-for-rhel-7-server-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-ha-for-rhel-7-server-rpms/
+ui_repoid_vars = releasever basearch
+name = Red Hat Enterprise Linux High Availability (for RHEL 7 Server) (RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 1
+gpgcheck = 1
+
+[rhel-7-server-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-rpms/
+ui_repoid_vars = releasever basearch
+name = Red Hat Enterprise Linux 7 Server (RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 1
+gpgcheck = 1
+
+[rhel-7-server-extras-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-extras-rpms/
+ui_repoid_vars = basearch
+name = Red Hat Enterprise Linux 7 Server - Extras (RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 1
+gpgcheck = 1
+
+[rhel-7-server-openstack-5.0-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-openstack-5.0-rpms/
+ui_repoid_vars = releasever basearch
+name = Red Hat OpenStack 5.0 for RHEL 7 (RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 1
+gpgcheck = 1
+
+[rhel-7-server-supplementary-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-supplementary-rpms/
+ui_repoid_vars = releasever basearch
+name = Red Hat Enterprise Linux 7 Server - Supplementary (RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 1
+gpgcheck = 1
+
+[rhel-7-server-optional-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-optional-rpms/
+ui_repoid_vars = releasever basearch
+name = Red Hat Enterprise Linux 7 Server - Optional (RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 1
+gpgcheck = 1
+
+[rhel-7-server-extras-source-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-extras-source-rpms/
+ui_repoid_vars = basearch
+name = Red Hat Enterprise Linux 7 Server - Extras (Source RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 0
+gpgcheck = 1
+
+[rhel-7-server-openstack-5.0-source-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-openstack-5.0-source-rpms/
+ui_repoid_vars = releasever basearch
+name = Red Hat OpenStack 5.0 for RHEL 7 (Source RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 0
+gpgcheck = 1
+
+[rhel-ha-for-rhel-7-server-source-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-ha-for-rhel-7-server-source-rpms/
+ui_repoid_vars = releasever basearch
+name = Red Hat Enterprise Linux High Availability (for RHEL 7 Server) (Source RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 0
+gpgcheck = 1
+
+[rhel-7-server-source-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-source-rpms/
+ui_repoid_vars = releasever basearch
+name = Red Hat Enterprise Linux 7 Server (Source RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 0
+gpgcheck = 1
+
+[rhel-7-server-supplementary-source-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-supplementary-source-rpms/
+ui_repoid_vars = releasever basearch
+name = Red Hat Enterprise Linux 7 Server - Supplementary (Source RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 0
+gpgcheck = 1
+
+[rhel-7-server-optional-source-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-optional-source-rpms/
+ui_repoid_vars = releasever basearch
+name = Red Hat Enterprise Linux 7 Server - Optional (Source RPMs)
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+enabled = 0
+gpgcheck = 1
+
+[rhel-7-server-cisco-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-cisco-rpms/
+gpgkey = http://173.39.232.144/repo/rhel-7-server-cisco-source-rpms/RPM-GPG-key-chricker
+gpgcheck=1
+ui_repoid_vars = releasever basearch
+name = Supplemental Cisco RPMs for RHEL 7 Server (RPMs)
+enabled = 1
+
+[rhel-7-server-cisco-source-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-cisco-source-rpms/
+gpgkey = http://173.39.232.144/repo/rhel-7-server-cisco-source-rpms/RPM-GPG-key-chricker
+gpgcheck=1
+ui_repoid_vars = releasever basearch
+name = Supplemental Cisco RPMs for RHEL 7 Server (Source RPMs)
+enabled = 1
+
+[rhel-7-server-oslo-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-oslo-rpms/
+gpgkey = http://173.39.232.144/repo/rhel-7-server-oslo-source-rpms/RPM-GPG-key-chricker
+gpgcheck=1
+ui_repoid_vars = releasever basearch
+name = Supplemental oslo RPMs for RHEL 7 Server (RPMs)
+enabled = 0
+
+[rhel-7-server-oslo-source-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-oslo-source-rpms/
+gpgkey = http://173.39.232.144/repo/rhel-7-server-oslo-source-rpms/RPM-GPG-key-chricker
+gpgcheck=1
+ui_repoid_vars = releasever basearch
+name = Supplemental oslo RPMs for RHEL 7 Server (Source RPMs)
+enabled = 0
+
+[rhel-7-server-kombu-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-kombu-rpms/
+gpgkey = http://173.39.232.144/repo/rhel-7-server-kombu-source-rpms/RPM-GPG-key-chricker
+gpgcheck=1
+ui_repoid_vars = releasever basearch
+name = Supplemental kombu RPMs for RHEL 7 Server (RPMs)
+enabled = 0
+
+[rhel-7-server-kombu-source-rpms]
+metadata_expire = 86400
+baseurl = http://173.39.232.144/repo/rhel-7-server-kombu-source-rpms/
+gpgkey = http://173.39.232.144/repo/rhel-7-server-kombu-source-rpms/RPM-GPG-key-chricker
+gpgcheck=1
+ui_repoid_vars = releasever basearch
+name = Supplemental kombu RPMs for RHEL 7 Server (Source RPMs)
+enabled = 0
+
+[epel]
+name=epel
+failovermethod=priority
+baseurl=http://download-i2.fedoraproject.org/pub/epel/7/x86_64/
+enabled=0
+metadata_expire=7d
+gpgcheck=0
