@@ -3,7 +3,13 @@
 This repository houses custom elements for use with Openstack diskimage-builder
 
 ## Usage
-Install diskimage-builder either from pypi or github
+
+Automated creation and testing of images is scripted by
+		
+		build_images.sh
+		
+## Setup
+Install diskimage-builder either from pypi or [github](https://github.com/openstack/diskimage-builder) (Recommneded)
 
         pip install -r requirements.txt
 
