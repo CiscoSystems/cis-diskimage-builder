@@ -6,6 +6,7 @@ if [ $# -ne 1 ]; then
 fi
 
 IMAGE=$1
+IMAGE_DIR=`pwd`
 MP="/mnt/test"
 
 if [ ! -d $MP ] ; then
@@ -18,7 +19,7 @@ modprobe nbd
 # Look for next available device
 COUNT=`lsblk | grep disk | grep -c nbd`
 # connect (read-only) to next available device
-qemu-nbd -r -c /dev/nbd${COUNT} $IMAGE
+qemu-nbd -r -c /dev/nbd${COUNT} ${IMAGE_DIR}/${IMAGE}
 
 mount -o ro /dev/nbd${COUNT}p1 $MP
 
