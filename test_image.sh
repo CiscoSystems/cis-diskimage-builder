@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 if [ $# -ne 1 ]; then
   echo "Usage: `basename $0` image"
