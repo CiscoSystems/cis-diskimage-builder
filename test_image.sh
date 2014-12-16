@@ -20,9 +20,9 @@ modprobe nbd
 COUNT=`lsblk | grep disk | grep -c nbd`
 # connect (read-only) to next available device
 qemu-nbd -r -c /dev/nbd${COUNT} ${IMAGE_DIR}/${IMAGE}
-
+sleep 1
 mount -o ro /dev/nbd${COUNT}p1 $MP
-
+sleep 1
 # Begin tests
 
 function cleanup() {
